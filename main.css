@@ -1,0 +1,265 @@
+/*******************************************************
+*
+* 1. Reset
+*
+*******************************************************/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,a,abbr,acronym,address,big,cite,code,del,dfn,img,ins,kbd,q,s,samp,small,strike,tt,var,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+area,img,map {
+	outline: none;
+}
+
+/* Helpers */
+
+.clearfix,.clear {
+	clear: both;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,*:before,*:after {
+	box-sizing: inherit;
+}
+
+html,body {
+	-webkit-text-size-adjust: none;
+}
+
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	opacity: 1;
+	color: inherit;
+}
+
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	opacity: 1;
+	color: inherit;
+}
+
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	opacity: 1;
+	color: inherit;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	opacity: 1;
+	color: inherit;
+}
+
+input,textarea,button,select {
+	border-radius: 0;
+	font-family: inherit;
+}
+
+textarea {
+	resize: vertical;
+}
+
+a {
+	outline: none;
+}
+
+.ai-hide {
+	display: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+}
+
+
+/*******************************************************
+ *
+ * 2. Global CSS
+ *
+ *******************************************************/
+
+body{
+	font-family: 'Montserrrat', Sans-serif;
+	font-size: 12px;
+	background: #FFF;
+	color: #000000;
+	margin: 0;
+}
+
+.outer {
+	width:100%;
+	min-width:960px;
+	position: relative;
+}
+
+.inner{
+	width:960px;
+	margin:0 auto;
+	position: relative;
+}
+
+.outer:after,
+.inner:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* Text formatting */
+a{
+	outline: none;
+	color:inherit;
+}
+a:link, 
+a:visited{
+	text-decoration: none; 
+}
+section{
+	position: relative
+}
+	section h2{
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+		font-weight: 900;
+		font-size: 4vh;
+		color: #FFF;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 0.05em;
+	}
+
+
+/*******************************************************
+ *
+ * 3. Custom CSS
+ *
+ *******************************************************/
+
+#scroll-down {
+	position: fixed;
+	top: 50vh;
+	right: 70px;
+	z-index: 1003;
+	transform: translateY(-50%);
+	text-align: center;
+	text-transform: uppercase;
+	color: #888888;
+}
+	#scroll-down .aios-scroll-arrow{
+		cursor: pointer;
+		display: block;
+		font-size: 16px;
+		text-align: center;
+	}
+		#scroll-down .aios-scroll-arrow{
+			position: relative;
+			font-family: agentimage !important;
+			speak: none;
+			font-style: normal;
+			font-weight: 400;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 0.7;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		#scroll-down .aios-scroll-prev:before{
+			content: "\e904";
+		}
+		#scroll-down .aios-scroll-next:before{
+			content: "\b0169";
+		}
+	#scroll-down ul { display: inline-block; }
+		#scroll-down ul li {
+			display: block;
+			position: relative;
+			margin: 10px 0;
+		}
+			#scroll-down ul li .scroll-section-title {
+				position: absolute;
+				top: 9px;
+				right: 46px;
+				font-size: 11px;
+				color: #888888;
+				text-transform: uppercase;
+				white-space: nowrap;
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0.3s, opacity 0.3s ease-in-out, top 0.3s;
+			}
+				#scroll-down ul li:hover .scroll-section-title,
+				#scroll-down ul li.nav-active-section .scroll-section-title {
+					visibility: visible;
+					opacity: 1;
+				}
+			#scroll-down ul li a {
+				position: relative;
+				border: solid 1px transparent;
+				display: block;
+				width: 29px;
+				height: 29px;
+				border-radius: 50%;
+				transition: all 0.3s ease-in-out, top 0.3s;
+				cursor: pointer;
+				outline: 0 !important;
+			}
+				#scroll-down ul li.nav-active-section a,
+				#scroll-down ul li a:hover,
+				#scroll-down:not(.vertical-nav-active) ul li:first-child a {
+					border: solid 1px #888888;
+				}
+				#scroll-down ul li a::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 7px;
+					height: 7px;
+					background: #888888;
+					border-radius: 50%;
+					transform: translate(-50%, -50%);
+				}
+					#scroll-down ul li.nav-active-section a::before {
+						background: #582c4e;
+					}
+					#scroll-down:not(.vertical-nav-active) ul li:first-child a::before {
+						background: #FFF;
+					}
+	#scroll-down .scroll-down-text {
+		display: block;
+		margin-top: 13px;
+		font-size: 11px;
+		letter-spacing: 0.1em;
+	}

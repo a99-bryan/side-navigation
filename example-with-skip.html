@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vertical Fixed Navigation - Selecting one of its sections and smoothly scrolling to it.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.thedesignpeople.net/agentimage-font/fonts/agentimage.font.icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="jquery.min.js"></script>
+    <script src="jquery.sidenavigation.js"></script>
+    <script>
+        ( function() {
+            jQuery( document ).ready( function() {
+                jQuery('#scroll-down').sideNavigation({
+                    skipSectionId: 'content-slider',
+                    scrollSpeed: 500
+                });
+            } );
+        } )();
+    </script>
+</head>
+<body>
+    <div id="scroll-down" class="testtt">
+        <ul class="aios-section-nav"></ul>
+        <span class="scroll-down-text">Scroll Down</span>
+    </div>
+
+    <section id="content-slider" class="aios-scroll-section" data-aios-scroll-title="Slider" style="height: 100vh; background: rgba(0,0,0,0.9)">
+        <h2>Slider</h2>
+    </section>
+    <section id="content-about" class="aios-scroll-section" data-aios-scroll-title="About" style="height: 60vh; background: rgba(0,0,0,0.7)">
+        <h2>About</h2>
+    </section>
+    <section id="content-listings" class="aios-scroll-section" data-aios-scroll-title="Listings" style="height: 50vh; background: rgba(0,0,0,0.5)">
+        <h2>Listings</h2>
+    </section>
+    <section id="content-communities" class="aios-scroll-section" data-aios-scroll-title="Communities" style="height: 70vh; background: rgba(0,0,0,0.3)">
+        <h2>Communities</h2>
+    </section>
+    <section id="content-testimonials" class="aios-scroll-section" data-aios-scroll-title="Testimonials" style="height: 55vh; background: rgba(0,0,0,0.1)">
+        <h2>Testimonials</h2>
+    </section>
+    <section id="content-contact-form" class="aios-scroll-section" data-aios-scroll-title="Contact Form" style="height: 30vh; background: rgba(0,0,0,0.3)">
+        <h2>Contact Form</h2>
+    </section>
+    <section id="content-the-team" class="aios-scroll-section" data-aios-scroll-title="The Team" style="height: 50vh; background: rgba(0,0,0,0.7)">
+        <h2>The Team</h2>
+    </section>
+    <section id="content-faqs" class="aios-scroll-section" data-aios-scroll-title="FAQs" style="height: 40vh; background: rgba(0,0,0,0.2)">
+        <h2>FAQs</h2>
+    </section>
+    <section id="content-footer" style="height: 20vh; background: rgba(0,0,0,0.5)">
+        <h2>Footer</h2>
+    </section>
+</body>
+</html>
